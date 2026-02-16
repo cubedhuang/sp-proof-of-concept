@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "nasin-nanpa";
+        src: url("nasin-nanpa-5.0.0-beta.3.otf") format("opentype");
+      }
+
+      body {
+        font-family: Inter;
+        padding: 2rem 0;
+        margin: 0;
+      }
+      .row {
+        display: grid;
+        grid-template-columns:
+          minmax(1rem, 1fr)
+          minmax(0, 50ch)
+          2rem
+          minmax(0, 50ch)
+          minmax(1rem, 1fr);
+        align-items: baseline;
+      }
+
+      .row > :nth-child(1) {
+        grid-column: 2;
+      }
+
+      .row > :nth-child(2) {
+        grid-column: 4;
+        font-family: "nasin-nanpa";
+        font-feature-settings: "liga" 1;
+      }
+
+      header {
+        background: #ffff64;
+        color: #000099;
+        padding: 0.5rem 0 0.25rem 0;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        hyphens: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="row">
+      <h1>about the association</h1>
+      <h1>kulupu pali li seme</h1>
+    </header>
+
+    <div class="row">
+      <p>
+        The sitelen pona Publishers and Typographers Association represents the
+        collective interests of publishers and fontmakers who use the sitelen
+        pona writing system for the toki pona language. Drawing members from
+        around the globe, we engage in content creation, standard setting,
+        advocacy, networking, and collaboration to ensure sitelen pona continues
+        to thrive.
+      </p>
+      <p>
+        mi zz zz moku e ijo lon tomo suli <br />
+        sina kin li moku e ijo lon tomo ni^ <br />
+        mi ale li moku e ijo lon tomo a <br />
+        mi kulupu
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        quibusdam dicta modi ab nisi? Culpa odio deserunt adipisci architecto
+        error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+        soluta.
+      </p>
+      <p>
+        mi zz zz moku e ijo <br />
+        sina kin li moku e ijo <br />
+        mi ale li moku e ijo <br />
+        mi kulupu
+      </p>
+    </div>
+  </body>
+</html>
