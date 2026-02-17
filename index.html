@@ -16,42 +16,45 @@
         margin: 0;
       }
 
-      .row {
+      .split {
         display: grid;
         grid-template-columns:
-          minmax(1rem, 1fr)
-          minmax(0, 50ch)
           2rem
           minmax(0, 50ch)
-          minmax(1rem, 1fr);
-        align-items: baseline;
+          1rem
+          minmax(0, 50ch)
+          2rem;
+        grid-auto-flow: dense;
+        gap: 1rem 0;
         margin-block: 1rem;
       }
 
-      .row > :nth-child(1) {
+      .split > [lang="en"] {
         grid-column: 2;
       }
 
-      .row > :nth-child(2) {
+      .split > [lang="tok"] {
         grid-column: 4;
         font-family: "nasin-nanpa";
         font-feature-settings: "liga" 1;
+        font-size: 1.25rem;
       }
 
       @media screen and (max-width: 40em) {
-        .row {
+        .split {
           grid-template-columns: 1fr;
           padding-inline: 1rem;
           gap: 1rem;
         }
-        header.row {
+        header.split {
           gap: 0.25rem;
         }
-        .row > :nth-child(1) {
+        .split > [lang="en"],
+        .split > [lang="tok"] {
           grid-column: 1;
         }
-        .row > :nth-child(2) {
-          grid-column: 1;
+        .split > [lang="tok"] {
+          order: 1;
         }
       }
 
@@ -63,6 +66,11 @@
 
       h1 {
         margin: 0;
+        align-items: baseline;
+      }
+
+      h1[lang="tok"] {
+        font-size: 1.5rem !important;
       }
 
       p {
@@ -72,13 +80,13 @@
     </style>
   </head>
   <body>
-    <header class="row">
-      <h1>about the association</h1>
-      <h1>kulupu pali li seme</h1>
+    <header class="split">
+      <h1 lang="en">about the association</h1>
+      <h1 lang="tok">kulupu pali li seme</h1>
     </header>
 
-    <div class="row">
-      <p>
+    <main class="split">
+      <p lang="en">
         The sitelen pona Publishers and Typographers Association represents the
         collective interests of publishers and fontmakers who use the sitelen
         pona writing system for the toki pona language. Drawing members from
@@ -86,27 +94,43 @@
         advocacy, networking, and collaboration to ensure sitelen pona continues
         to thrive.
       </p>
-      <p>
-        mi zz zz moku e ijo lon tomo suli <br />
-        sina kin li moku e ijo lon tomo ni^ <br />
-        mi ale li moku e ijo lon tomo a <br />
-        mi kulupu
-      </p>
-    </div>
-
-    <div class="row">
-      <p>
+      <p lang="en">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
         quibusdam dicta modi ab nisi? Culpa odio deserunt adipisci architecto
         error. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
         soluta.
       </p>
-      <p>
-        mi zz zz moku e ijo <br />
-        sina kin li moku e ijo <br />
-        mi ale li moku e ijo <br />
-        mi kulupu
+      <p lang="en">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        deserunt aperiam illum nostrum saepe! Accusamus debitis in adipisci.
+        Mollitia voluptatum saepe minima odit quam, in ipsa sit. Quasi, corrupti
+        perspiciatis!
       </p>
-    </div>
+      <p lang="tok">
+        jan li pana e moku tawa sina li pana e moku tawa sina li pana e moku
+        tawa sina li pana e moku tawa sina li pana e moku tawa sina li pana e
+        moku tawa sina la ijo li kama pona li awen kama pona li awen awen kama
+        pona a lon tenpo ale
+      </p>
+      <p lang="tok">
+        monsuta mu mun musi mute n namako nanpa nasa nasin nena ni nimi nimisin
+        nja noka o ojuta oke oko olin omekapo ona open owe pakala pake pali
+        palisa pan pana penpo pi pika pilin pimeja pini pipi po poka poki pona
+        powe pu puwa sama san seli selo seme sewi sijelo sike sin sina sinpin
+        sitelen soko sona soto soweli su suli suno supa sutopatikuna suwi taki
+        tan taso tawa te teje telo tenpo to toki tomo tonsi tu unpa unu usawi
+        uta utala wa walo wan waso wasoweli wawa weka wekama wile wuwojiti
+        yupekosi
+      </p>
+      <p lang="tok">
+        a akesi ala alasa ale ali anpa ante anu apeja awen e en epiku esun ijo
+        ike ilo insa isipin jaki jami jan jasima jelo jo kala kalama kama
+        kamalawala kapesi kasi ken kepeken kijetesantakalu kiki kili kin kipisi
+        kiwen ko kokosila kon konwe ku kule kulijo kulupu kute la lanpan lape
+        laso lawa leko len lete li lili linja linluwi lipu loje lon luka lukin
+        lupa ma majuna mama mani meli melome meso mi mije mijomi misa misikeke
+        moku moli monsi
+      </p>
+    </main>
   </body>
 </html>
